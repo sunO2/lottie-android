@@ -60,11 +60,21 @@ jobs:
           # 设置压缩文件的名称，在控制台会得到WhuHelper-debug.zip文件的下载链接
           # 下载后解压缩，里面直接可以看到app-debug.apk，没有其他东西
           name: lottie-debug
-          path: /home/runner/work/lottie-android/lottie-android/sample/build/outputs/apk/debug/app-debug.apk
+          path: sample/build/outputs/apk/debug/app-debug.apk
       - name: file look
         shell: bash
         run: |
+          cd sample
           ls *
+          cd build
+          ls *
+          cd outputs
+          ls *
+          cd apk
+          ls *
+          cd debug
+          ls *
+          
   deploy:
     name: Upload Release Asset
     # 依赖上一个job
