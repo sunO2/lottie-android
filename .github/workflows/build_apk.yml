@@ -61,7 +61,10 @@ jobs:
           # 下载后解压缩，里面直接可以看到app-debug.apk，没有其他东西
           name: lottie-debug
           path: /home/runner/work/lottie-android/lottie-android/sample/build/outputs/apk/debug/app-debug.apk
-
+      - name: file look
+        shell: bash
+        run: |
+          ls *
   deploy:
     name: Upload Release Asset
     # 依赖上一个job
